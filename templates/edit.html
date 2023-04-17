@@ -8,9 +8,9 @@
         <h1>Edit Data</h1>
         <form id="edit-data-form" method="post" action="{{ url_for('edit_data', id=data[0]) }}">
             <label for="column1">Column 1:</label>
-            <input type="text" id="column1" name="column1" value="{{ data[1] }}"><br><br>
+            <input type="text" id="column1" name="column1" value="{{ data[1] }}" required><br><br>
             <label for="column2">Column 2:</label>
-            <input type="text" id="column2" name="column2" value="{{ data[2] }}"><br><br>
+            <input type="text" id="column2" name="column2" value="{{ data[2] }}" required><br><br>
             <button type="submit" id="edit-data-form">Save</button>
             <button type="button" onclick="location.href='{{ url_for('index') }}'">Cancel</button>
 

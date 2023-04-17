@@ -73,7 +73,7 @@ th{
 	
 }
 .delete-button:hover{
-	background-color: orange;
+	background-color: lightcoral;
 }
 
 .edit-button{
@@ -90,7 +90,7 @@ th{
 	border-radius: 5px;
 }
 .edit-button:hover{
-	background-color: yellow;
+	background-color: lightsalmon;
 }
 #add-data-form {
 	display: inline;

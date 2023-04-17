@@ -9,10 +9,10 @@
         <h1>Add Data</h1>
         <form id="add-data-form" method="post" action="{{ url_for('add_data') }}">
             <label for="column1">Column 1:</label>
-            <input type="text" id="column1" name="column1"><br><br>
+            <input type="text" id="column1" name="column1" required><br><br>
             <label for="column2">Column 2:</label>
-            <input type="text" id="column2" name="column2"><br><br>
-            <button type="submit" id="add-data-form">Add Data</button>
+            <input type="text" id="column2" name="column2" required><br><br>
+            <button type="submit" id="add-data-form">Add</button>
         </form>
         <br> 
         <h2>Data Table</h2>
