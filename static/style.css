@@ -73,12 +73,12 @@ th{
 	
 }
 .delete-button:hover{
-	background-color: lightcoral;
+	background-color: plum;
 }
 
 .edit-button{
-	background-color: orange;
-	color: black;
+	background-color: blue;
+	color: white;
 	border: none;
 	padding: 10px 10px;
 	text-align: center;
