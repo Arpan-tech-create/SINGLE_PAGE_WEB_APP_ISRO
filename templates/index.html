@@ -82,6 +82,7 @@
                     console.log(response.data);
                     alert(response.data.message);
                     this.refreshTable();
+			#location.reload();
                 }.bind(this))
                 .catch(function(error) {
                     console.log(error);
