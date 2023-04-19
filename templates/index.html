@@ -7,15 +7,18 @@
 <body>
     <div class="container">
         <h1>Add Data</h1>
-        <form id="add-data-form" method="post" action="{{ url_for('add_data') }}">
+        <button type="button" id="add-data-button" onclick="showInputFields()" >ADD</button>
+
+        <form id="add-data-form" method="post" action="{{ url_for('add_data') }}" style="display: none;">
             <label for="column1">Column 1:</label>
             <input type="text" id="column1" name="column1" required><br><br>
             <label for="column2">Column 2:</label>
             <input type="text" id="column2" name="column2" required><br><br>
-            <button type="submit" id="add-data-form">Add</button>
+            <button type="submit" id="add-data-form">GO</button>
         </form>
+        
         <br> 
-        <h2>Data Table</h2>
+    <br/><br/>
         <table>
             <thead>
                 <tr>
@@ -106,6 +109,14 @@
     
     }
        });
+       document.getElementById("add-data-button").addEventListener("click", function() {
+        document.getElementById("add-data-form").style.display = "block";
+    });
+    function showInputFields() {
+    document.getElementById("column1").style.display = "block";
+    document.getElementById("column2").style.display = "block";
+    document.getElementById("add-data-button").classList.add("hidden");
+}
     </script>
 </body>
 </html>

@@ -95,3 +95,7 @@ th{
 #add-data-form {
 	display: inline;
   }
+
+.hidden {
+    display: none;
+}
