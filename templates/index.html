@@ -45,6 +45,7 @@
     <script src="{{url_for('static',filename='vue.js')}}"></script>
     <script src="{{url_for('static',filename='axios.js')}}"></script>
     <script>
+        
         new Vue({
             el: '#add-data-form',
             methods: {
@@ -76,30 +77,24 @@
 							console.log(error);
 						});
 				},
-                deleteRow: function(id) {
-                    axios.delete('/delete_data/' + id)
-                .then(function(response) {
-                    console.log(response.data);
-                    alert(response.data.message);
-                    this.refreshTable();
-                }.bind(this))
-                .catch(function(error) {
-                    console.log(error);
-                    alert('Error deleting row');
-                });
-        },
-        refreshTable: function() {
-					axios.get('/get_data')
-						.then(function(response) {
-							this.data = response.data;
-						}.bind(this))
-						.catch(function(error) {
-							console.log(error);
-						});
-				},
-
-    },
+    deleteRow: function(id) {
+        let self=this;
+        axios.delete('/delete_data/' + id)
+        .then(function(response) {
+            console.log(response.data);
+            location.reload();
+            self.$delete(self.tableData, self.tableData.findIndex(function(item) {
+            return item.id === id;
+        }));
+          
+        })
+        .catch(function(error) {
+            console.log(error);
+                  });
+},
+},
     mounted: function() {
+        
         let deleteButtons = document.querySelectorAll('.delete-button');
         deleteButtons.forEach(function(button) {
             button.addEventListener('click', function(event) {
@@ -108,7 +103,8 @@
                 this.deleteRow(rowId);
             }.bind(this));
         }.bind(this));
-    },
+    
+    }
        });
     </script>
 </body>
