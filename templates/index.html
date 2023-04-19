@@ -82,7 +82,7 @@
 				},
     deleteRow: function(id) {
         let self=this;
-        if (confirm("Are you sure you want to delete this row?")){
+        if (confirm("Are you sure ?")){
         axios.delete('/delete_data/' + id)
         .then(function(response) {
             console.log(response.data);
