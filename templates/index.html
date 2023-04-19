@@ -82,6 +82,7 @@
 				},
     deleteRow: function(id) {
         let self=this;
+        if (confirm("Are you sure you want to delete this row?")){
         axios.delete('/delete_data/' + id)
         .then(function(response) {
             console.log(response.data);
@@ -94,6 +95,7 @@
         .catch(function(error) {
             console.log(error);
                   });
+                }
 },
 },
     mounted: function() {
