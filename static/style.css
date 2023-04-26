@@ -114,3 +114,26 @@ th{
 	border-radius: 5px;
 	
 }
+
+#add-data-button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	border-radius: 5px;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+  
+  #add-data-button:hover {
+	background-color: #3e8e41;
+  }
+  
+  .hidden {
+	display: none;
+  }
+  

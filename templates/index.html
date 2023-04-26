@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <h1>Add Data</h1>
-        <button type="button" id="add-data-button" onclick="showInputFields()" >ADD</button>
+        <button type="button" id="add-data-button" onclick="showInputFields()" class="add-data-button">ADD</button>
 
         <form id="add-data-form" method="post" action="{{ url_for('add_data') }}" style="display: none;">
             <label for="column1">Column 1:</label>
@@ -127,6 +127,7 @@ deleteRow: function(id) {
        });
        document.getElementById("add-data-button").addEventListener("click", function() {
         document.getElementById("add-data-form").style.display = "block";
+        document.getElementById("add-data-button").style.display = "none";
     });
     function showInputFields() {
     document.getElementById("column1").style.display = "block";
